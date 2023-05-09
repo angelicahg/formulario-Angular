@@ -1,23 +1,19 @@
 <div class="col-md-6 offset-md-3 mt-3">
     <div class="movie">
       <div class="movie-body">
-        <form (ngSubmit)="onSubmit()">
-            <label>
-              Nombre:
-              <input type="text" name="title" [(ngModel)]="nombres" placeholder="Title" class="form-control"
-            autofocus>
-            </label>
-            <br>
-            <label>
-              Email:
-              <input type="email" [(ngModel)]="email" name="email" required>
-            </label>
-            <br>
+        <form class="bg-secondary p-3" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-1">
+                <input type="text" name="title" [(ngModel)]="nombres" placeholder="Title" class="form-control"
+                  autofocus>
+              </div>
+              <div class="form-group mb-1">
+                <input type="text" name="title" [(ngModel)]="nombres" placeholder="Title" class="form-control"
+                  autofocus>
+              </div>
+            
             <button type="submit">Enviar</button>
           
-          <button class="btn btn-danger" (click)="edit ? updateForms() : saveNewForm() ">
-            Agregar
-          </button>
+          
         </form>
   
       </div>

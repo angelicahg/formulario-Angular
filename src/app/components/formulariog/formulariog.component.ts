@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { Form }from 'src/app/models/form'
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-formulariog',
@@ -20,7 +19,7 @@ export class FormulariogComponent {
 
   onSubmit(): void {
     const formData = { nombres: this.nombres, apellidos: this.apellidos };
-    this.http.post('http://190.60.101.59:6003/Help/api', formData)
+    this.http.post('http://190.60.101.59:6003/Help/Api/POST-api-Personas', formData)
       .subscribe((response) => {
         console.log(response);
       });
