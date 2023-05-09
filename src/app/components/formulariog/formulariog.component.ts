@@ -19,7 +19,7 @@ export class FormulariogComponent {
 
   onSubmit(): void {
     const formData = { nombres: this.nombres, apellidos: this.apellidos };
-    this.http.post('http://190.60.101.59:6003/Help/Api/POST-api-Personas', formData)
+    this.http.post('http://190.60.101.59:6003/api/Personas', formData)
       .subscribe((response) => {
         console.log(response);
       });
